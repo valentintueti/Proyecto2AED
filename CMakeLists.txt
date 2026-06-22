@@ -8,4 +8,5 @@ add_executable(Proyecto2_AED_SuffixTree src/main.cpp
         src/core/BusquedaIngenua.h
         src/loader/textLoader.h
         src/loader/textNormalizer.h
-        src/ui/app.h)
+        src/ui/app.h
+        src/core/suffixTreeNode.h)
