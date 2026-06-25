@@ -19,13 +19,26 @@ struct SuffixTreeNode {
     int suffixIndex;                 // -1 si es nodo interno
 
     // Constructor
-    SuffixTreeNode(int start, int* end);
+    SuffixTreeNode(int start_, int* end_):
+    start(start_), end(end_), suffixLink(nullptr), suffixIndex(-1) {
+        for(int i = 0; i < 256; i++) {
+            children[i] = nullptr;
+        }
+    }
     // Destructor
-    ~SuffixTreeNode();
+    ~SuffixTreeNode() {
+     if(!isLeaf()) delete end;
+    }
 
     // Métodos
-    int  edgeLength() const;         // end - start + 1
-    bool isLeaf()     const;         // suffixIndex != -1
+    int  edgeLength() const {
+        return *end - start + 1;
+    }
+
+    bool isLeaf()     const {
+        return suffixIndex != -1;
+    }
+
 };
 
 #endif //SUFFIXTREENODE_H
