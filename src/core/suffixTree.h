@@ -17,7 +17,9 @@ public:
     SuffixTree();
 
     //Destructor
-    ~SuffixTree();
+    ~SuffixTree() {
+        freeDFS(root);
+    }
 
     //Métodos públicos
     void buildUkkonen(const std::string& inputText) {
@@ -52,8 +54,8 @@ public:
     std::vector<int> findOccurrences(const std::string& pattern) const;
 
     //Métricas
-    double getBuildTimeMs()      const;
-    double getLastSearchTimeMs() const;
+    double getBuildTimeMs() const {return buildTimeMs;}
+    double getLastSearchTimeMs() const {return lastSearchTimeMs;}
 
 private:
     //Texto
@@ -89,7 +91,7 @@ private:
         while (remainder > 0) {
             if (activeLength == 0) activeEdge = pos;
 
-            if(activeEnd->children[(unsigned char)text[activeEdge]] == nullptr) {
+            if(activeNode->children[(unsigned char)text[activeEdge]] == nullptr) {
                 activeNode->children[(unsigned char)text[activeEdge]] = newNode(pos, &globalEnd);
 
                 if (lastNewInternal != nullptr) {
@@ -102,6 +104,27 @@ private:
                 SuffixTreeNode* next = activeNode->children[(unsigned char)text[activeEdge]];
 
                 if(walkDown(next)) continue;
+
+                if(text[next->start + activeLength] == text[pos]) {
+                    activeLength++;
+                    if (lastNewInternal != nullptr) {
+                        lastNewInternal->suffixLink = activeNode;
+                        lastNewInternal = nullptr;
+                    }
+                    break;
+                }
+
+                int* splitEnd = new int(next->start + activeLength - 1);
+                SuffixTreeNode* split = newNode(next->start, splitEnd);
+
+                activeNode->children[(unsigned char)text[activeEdge]] = split;
+                split->children[(unsigned char)text[pos]] = newNode(pos, &globalEnd);
+                next->start += activeLength;
+                split->children[(unsigned char)text[next->start]] = next;
+
+                if (lastNewInternal != nullptr)
+                    lastNewInternal->suffixLink = split;
+                lastNewInternal = split;
 
             }
 
@@ -126,11 +149,38 @@ private:
 
         return false;
     }
-    void             setSuffixIndexDFS(SuffixTreeNode* node, int labelHeight); // asigna suffixIndex a hojas
+    void setSuffixIndexDFS(SuffixTreeNode* node, int labelHeight) {
+        if (node == nullptr) return;
+
+        bool isLeaf = true;
+
+        for(int i = 0; i < 256; i++) {
+            if (node->children[i] != nullptr) {
+                isLeaf = false;
+                setSuffixIndexDFS(
+                    node->children[i],
+                    labelHeight + node->children[i]->edgeLength()
+                );
+            }
+        }
+
+        if (isLeaf) {
+            node->suffixIndex = n - labelHeight;
+        }
+    }
 
     SuffixTreeNode*  findNode(const std::string& pattern) const;  // retorna nodo donde termina el patrón
     void             collectLeaves(SuffixTreeNode* node, std::vector<int>& result) const; // DFS recolecta hojas
-    void             freeDFS(SuffixTreeNode* node);    // libera memoria recursivamente
+    void freeDFS(SuffixTreeNode* node) {
+        if (node == nullptr) return;
+
+        for(int i = 0; i < 256; i++) {
+            if (node->children[i] != nullptr)
+                freeDFS(node->children[i]);
+        }
+
+        delete node;
+    }
 };
 
 #endif //SUFFIXTREE_H
