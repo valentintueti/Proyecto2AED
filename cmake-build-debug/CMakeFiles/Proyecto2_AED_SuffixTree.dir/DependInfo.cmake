@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/valma/Downloads/aed/Proyecto2_AED_SuffixTree/src/main.cpp" "CMakeFiles/Proyecto2_AED_SuffixTree.dir/src/main.cpp.obj" "gcc" "CMakeFiles/Proyecto2_AED_SuffixTree.dir/src/main.cpp.obj.d"
+  "C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/src/main.cpp" "CMakeFiles/Proyecto2_AED_SuffixTree.dir/src/main.cpp.obj" "gcc" "CMakeFiles/Proyecto2_AED_SuffixTree.dir/src/main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

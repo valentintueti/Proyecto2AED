@@ -49,9 +49,28 @@ public:
 
 
     }
-    bool             contains(const std::string& pattern) const;
-    int              countOccurrences(const std::string& pattern) const;
-    std::vector<int> findOccurrences(const std::string& pattern) const;
+    bool contains(const std::string& pattern) {
+        return findNode(pattern)!= nullptr;
+    }
+    int countOccurrences(const std::string& pattern) {
+        return findOccurrences(pattern).size();
+    }
+    std::vector<int> findOccurrences(const std::string& pattern) {
+        auto startTime = std::chrono::high_resolution_clock::now();
+
+        std::vector<int> result;
+
+        SuffixTreeNode* node = findNode(pattern);
+
+        if(node!=nullptr) {
+            collectLeaves(node, result);
+        }
+
+        auto endTime = std::chrono::high_resolution_clock::now();
+        lastSearchTimeMs = std::chrono::duration<double, std::milli>(endTim - startTime).count();
+
+        return result;
+    }
 
     //Métricas
     double getBuildTimeMs() const {return buildTimeMs;}
@@ -169,8 +188,44 @@ private:
         }
     }
 
-    SuffixTreeNode*  findNode(const std::string& pattern) const;  // retorna nodo donde termina el patrón
-    void             collectLeaves(SuffixTreeNode* node, std::vector<int>& result) const; // DFS recolecta hojas
+    SuffixTreeNode*  findNode(const std::string& pattern) const {
+        SuffixTreeNode* node = root;
+        int i = 0;
+        while (i < pattern.size()) {
+            int idx = SuffixTreeNode::charIndex(pattern[i]);
+
+            if(node->children[idx]==nullptr) return nullptr;
+
+            SuffixTreeNode* child = node->children[idx];
+
+            int edgeStart = child->start;
+            int edgeEnd = *child->end;
+
+            for(int j = edgeStart; j<= edgeEnd && i <pattern.size(); j++, i++) {
+                if(text[j] != pattern[i])
+                    return nullptr;
+            }
+            node = child;
+        }
+
+        return node;
+    }  // retorna nodo donde termina el patrón
+
+
+    void collectLeaves(SuffixTreeNode* node, std::vector<int>& result) const {
+        if (node == nullptr) return;
+
+        if(node->isLeaf()) {
+            result.push_back(node->suffixIndex);
+            return;
+        }
+
+        for(int i = 0; i<27; i++) {
+            if (node->children[i] != nullptr) {
+                collectLeaves(node->children[i], result);
+            }
+        }
+    }// DFS recolecta hojas
     void freeDFS(SuffixTreeNode* node) {
         if (node == nullptr) return;
 

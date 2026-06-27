@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Proyecto2_AED_SuffixTree"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/danie/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/Users/danie/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/danie/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/danie/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Proyecto2_AED_SuffixTree">
+				<Option output="C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Proyecto2_AED_SuffixTree.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/danie/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
+					<Add directory="C:/Users/danie/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Users/danie/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
+					<Add directory="C:/Users/danie/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Users/danie/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Users/danie/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Users/danie/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/danie/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proyecto2_AED_SuffixTree"/>
+					<CompileFile command="C:/Users/danie/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/danie/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/danie/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Proyecto2_AED_SuffixTree/fast">
+				<Option output="C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Proyecto2_AED_SuffixTree.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/danie/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
+					<Add directory="C:/Users/danie/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Users/danie/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
+					<Add directory="C:/Users/danie/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Users/danie/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Users/danie/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Users/danie/CLion 2024.1.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/danie/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proyecto2_AED_SuffixTree/fast"/>
+					<CompileFile command="C:/Users/danie/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/danie/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/danie/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/danie/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/Users/danie/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/danie/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/danie/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/danie/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/Users/danie/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/danie/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/danie/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/src/core/busquedaIngenua.h">
+			<Option target="Proyecto2_AED_SuffixTree"/>
+		</Unit>
+		<Unit filename="C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/src/core/suffixTree.h">
+			<Option target="Proyecto2_AED_SuffixTree"/>
+		</Unit>
+		<Unit filename="C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/src/core/suffixTreeNode.h">
+			<Option target="Proyecto2_AED_SuffixTree"/>
+		</Unit>
+		<Unit filename="C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/src/loader/textLoader.h">
+			<Option target="Proyecto2_AED_SuffixTree"/>
+		</Unit>
+		<Unit filename="C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/src/loader/textNormalizer.h">
+			<Option target="Proyecto2_AED_SuffixTree"/>
+		</Unit>
+		<Unit filename="C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/src/main.cpp">
+			<Option target="Proyecto2_AED_SuffixTree"/>
+		</Unit>
+		<Unit filename="C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/src/ui/app.h">
+			<Option target="Proyecto2_AED_SuffixTree"/>
+		</Unit>
+		<Unit filename="C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
