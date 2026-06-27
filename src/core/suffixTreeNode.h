@@ -12,7 +12,7 @@ struct SuffixTreeNode {
     int* end; // hojas comparten puntero globalEnd
 
     // Árbol
-    SuffixTreeNode* children[256];   // indexado por char (ASCII)
+    SuffixTreeNode* children[27];   //
     SuffixTreeNode* suffixLink;
 
     // Sufijo (solo hojas)
@@ -37,6 +37,11 @@ struct SuffixTreeNode {
 
     bool isLeaf()     const {
         return suffixIndex != -1;
+    }
+
+    static int charIndex(char c) {
+        if (c == ' ') return 26;
+        return c - 'a';
     }
 
 };

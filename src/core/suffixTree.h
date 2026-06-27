@@ -91,8 +91,8 @@ private:
         while (remainder > 0) {
             if (activeLength == 0) activeEdge = pos;
 
-            if(activeNode->children[(unsigned char)text[activeEdge]] == nullptr) {
-                activeNode->children[(unsigned char)text[activeEdge]] = newNode(pos, &globalEnd);
+            if(activeNode->children[SuffixTreeNode::charIndex(text[activeEdge])] == nullptr) {
+                activeNode->children[SuffixTreeNode::charIndex(text[activeEdge])] = newNode(pos, &globalEnd);
 
                 if (lastNewInternal != nullptr) {
                     lastNewInternal->suffixLink = activeNode;
@@ -101,7 +101,7 @@ private:
             }
             else {
 
-                SuffixTreeNode* next = activeNode->children[(unsigned char)text[activeEdge]];
+                SuffixTreeNode* next = activeNode->children[SuffixTreeNode::charIndex(text[activeEdge])];
 
                 if(walkDown(next)) continue;
 
@@ -117,10 +117,10 @@ private:
                 int* splitEnd = new int(next->start + activeLength - 1);
                 SuffixTreeNode* split = newNode(next->start, splitEnd);
 
-                activeNode->children[(unsigned char)text[activeEdge]] = split;
-                split->children[(unsigned char)text[pos]] = newNode(pos, &globalEnd);
+                activeNode->children[SuffixTreeNode::charIndex(text[activeEdge])] = split;
+                split->children[SuffixTreeNode::charIndex(text[pos])] = newNode(pos, &globalEnd);
                 next->start += activeLength;
-                split->children[(unsigned char)text[next->start]] = next;
+                split->children[SuffixTreeNode::charIndex(text[next->start])] = next;
 
                 if (lastNewInternal != nullptr)
                     lastNewInternal->suffixLink = split;
@@ -154,7 +154,7 @@ private:
 
         bool isLeaf = true;
 
-        for(int i = 0; i < 256; i++) {
+        for(int i = 0; i < 27; i++) {
             if (node->children[i] != nullptr) {
                 isLeaf = false;
                 setSuffixIndexDFS(
@@ -174,7 +174,7 @@ private:
     void freeDFS(SuffixTreeNode* node) {
         if (node == nullptr) return;
 
-        for(int i = 0; i < 256; i++) {
+        for(int i = 0; i < 27; i++) {
             if (node->children[i] != nullptr)
                 freeDFS(node->children[i]);
         }
