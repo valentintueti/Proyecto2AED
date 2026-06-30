@@ -1,3 +1,3 @@
-"C:\Users\danie\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\Proyecto2_AED_SuffixTree.dir/objects.a
-C:\Users\danie\CLION2~1.4\bin\mingw\bin\ar.exe qc CMakeFiles\Proyecto2_AED_SuffixTree.dir/objects.a @CMakeFiles\Proyecto2_AED_SuffixTree.dir\objects1.rsp
-C:\Users\danie\CLION2~1.4\bin\mingw\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\Proyecto2_AED_SuffixTree.dir/objects.a -Wl,--no-whole-archive -o Proyecto2_AED_SuffixTree.exe -Wl,--out-implib,libProyecto2_AED_SuffixTree.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Proyecto2_AED_SuffixTree.dir\linkLibs.rsp
+"C:\Program Files\JetBrains\CLion 2024.2.0.1\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\Proyecto2_AED_SuffixTree.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\Proyecto2_AED_SuffixTree.dir/objects.a @CMakeFiles\Proyecto2_AED_SuffixTree.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\Proyecto2_AED_SuffixTree.dir/objects.a -Wl,--no-whole-archive -o Proyecto2_AED_SuffixTree.exe -Wl,--out-implib,libProyecto2_AED_SuffixTree.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Proyecto2_AED_SuffixTree.dir\linkLibs.rsp

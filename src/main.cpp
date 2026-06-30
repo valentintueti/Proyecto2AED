@@ -1,6 +1,9 @@
 #include <iostream>
+#include <SFML/Graphics.hpp>
+#include "ui/app.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    App app;
+    app.run();
     return 0;
 }

@@ -14,7 +14,9 @@ class SuffixTree {
 
 public:
     //Constructor
-    SuffixTree();
+    SuffixTree() {
+        root = nullptr;
+    }
 
     //Destructor
     ~SuffixTree() {
@@ -45,7 +47,7 @@ public:
 
         auto end_time = std::chrono::high_resolution_clock::now();
 
-        buildTimeMs = std::chrono::duration<double, std::milli>(end_time - start_time);
+        buildTimeMs = std::chrono::duration<double, std::milli>(end_time - start_time).count();
 
 
     }
@@ -67,9 +69,42 @@ public:
         }
 
         auto endTime = std::chrono::high_resolution_clock::now();
-        lastSearchTimeMs = std::chrono::duration<double, std::milli>(endTim - startTime).count();
+        lastSearchTimeMs = std::chrono::duration<double, std::milli>(endTime - startTime).count();
 
         return result;
+    }
+
+    std::vector<std::string> getPatternPath(const std::string& pattern) const {
+        std::vector<std::string> path;
+        path.push_back("root");
+
+        SuffixTreeNode* node = root;
+        int i = 0;
+
+        while (i < (int)pattern.size()) {
+            int idx = SuffixTreeNode::charIndex(pattern[i]);
+
+            if (node->children[idx] == nullptr)
+                return path;  // patrón no encontrado, retorna lo que llevamos
+
+            SuffixTreeNode* child = node->children[idx];
+
+            int edgeStart = child->start;
+            int edgeEnd   = *child->end;
+
+            // construir el substring de esta arista que coincide con el patrón
+            std::string edgeLabel = "";
+            for (int j = edgeStart; j <= edgeEnd && i < (int)pattern.size(); j++, i++) {
+                if (text[j] != pattern[i])
+                    return path;  // no coincide, retorna lo que llevamos
+                edgeLabel += pattern[i];
+            }
+
+            path.push_back(edgeLabel);
+            node = child;
+        }
+
+        return path;
     }
 
     //Métricas
@@ -173,7 +208,7 @@ private:
 
         bool isLeaf = true;
 
-        for(int i = 0; i < 27; i++) {
+        for(int i = 0; i < 28; i++) {
             if (node->children[i] != nullptr) {
                 isLeaf = false;
                 setSuffixIndexDFS(
@@ -220,7 +255,7 @@ private:
             return;
         }
 
-        for(int i = 0; i<27; i++) {
+        for(int i = 0; i<28; i++) {
             if (node->children[i] != nullptr) {
                 collectLeaves(node->children[i], result);
             }
@@ -229,7 +264,7 @@ private:
     void freeDFS(SuffixTreeNode* node) {
         if (node == nullptr) return;
 
-        for(int i = 0; i < 27; i++) {
+        for(int i = 0; i < 28; i++) {
             if (node->children[i] != nullptr)
                 freeDFS(node->children[i]);
         }

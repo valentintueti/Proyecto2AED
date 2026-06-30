@@ -12,7 +12,7 @@
 class BusquedaIngenua {
 public:
 
-    std::vector<int> findOccurences(const std::string& text, const std::string& pattern) {
+    std::vector<int> findOccurrences(const std::string& text, const std::string& pattern) {
         auto startTime = std::chrono::high_resolution_clock::now();
 
         std::vector<int> result;

@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Proyecto2_AED_SuffixTree::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Proyecto2_AED_SuffixTree-Debug-e9e75c5966b3c8cdd564.json",
+					"jsonFile" : "target-Proyecto2_AED_SuffixTree-Debug-3c335fc4ea3b1e869241.json",
 					"name" : "Proyecto2_AED_SuffixTree",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug",
-		"source" : "C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED"
+		"build" : "C:/Users/valma/Downloads/aed/Proyecto2_AED_SuffixTree/cmake-build-debug",
+		"source" : "C:/Users/valma/Downloads/aed/Proyecto2_AED_SuffixTree"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 6
+		"minor" : 7
 	}
 }

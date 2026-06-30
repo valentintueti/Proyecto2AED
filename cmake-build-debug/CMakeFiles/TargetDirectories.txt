@@ -1,3 +1,3 @@
-C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/CMakeFiles/Proyecto2_AED_SuffixTree.dir
-C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/danie/OneDrive/Escritorio/UTEC/2026-0/AED/Proyecto2AED/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/valma/Downloads/aed/Proyecto2_AED_SuffixTree/cmake-build-debug/CMakeFiles/Proyecto2_AED_SuffixTree.dir
+C:/Users/valma/Downloads/aed/Proyecto2_AED_SuffixTree/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/valma/Downloads/aed/Proyecto2_AED_SuffixTree/cmake-build-debug/CMakeFiles/rebuild_cache.dir
